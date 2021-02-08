@@ -169,14 +169,30 @@ function main() {
   }
   // Average of Numbers
   let averageOfNumbers = sumOfNumbers / numbers.length
-
   const statistics = {}
   statistics.sum = sumOfNumbers
   statistics.average = averageOfNumbers
   statistics.smallest = smallest
   statistics.largest = largest
-
   console.log(statistics)
+
+  // Adventure Mode
+  // Sum of Odd
+  let sumOfOdd = 0
+  for (let index = 0; index < numbers.length; index++) {
+    if (numbers[index] % 2 == 1) {
+      sumOfOdd += numbers[index]
+    }
+  }
+  console.log(sumOfOdd)
+  // Sum Of even
+  let sumOfEven = 0
+  for (let index = 0; index < numbers.length; index++) {
+    if (numbers[index] % 2 == 0) {
+      sumOfEven += numbers[index]
+    }
+  }
+  console.log(sumOfEven)
 }
 
 document.addEventListener('DOMContentLoaded', main)
