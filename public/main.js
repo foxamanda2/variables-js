@@ -2,57 +2,48 @@ function main() {
   //Assigning variables
   const name = 'Amanda Fox'
   const numCoffee = 4
-  // console.log(`${name} drinks ${numCoffee} cups of coffee`)
-
+  console.log(`${name} drinks ${numCoffee} cups of coffee`)
   // Assigning variables to aboutAmanda
   const aboutAmanda = {
     name: 'Amanda',
     luckyNum: 3,
     favoriteMov: 'Howls Moving Castle',
   }
-  // console.log(aboutAmanda)
+  console.log(aboutAmanda)
 
   // Asking for questions for about me
-  // const userName = window.prompt('What is ya name?')
-  // const cupsOfCoffee = window.prompt('How many cups of coffee do you drink?')
-  // const favoriteMovies = window.prompt('What is your favorite movie?')
-  // const luckyNumber = parseFloat(window.prompt('What is your lucky number?'))
-
-  // console.log(
-  // `Hello ${userName}, you drink ${cupsOfCoffee} cups of coffee a day`
-  // )
-
+  const userName = window.prompt('What is ya name?')
+  const cupsOfCoffee = window.prompt('How many cups of coffee do you drink?')
+  const favoriteMovies = window.prompt('What is your favorite movie?')
+  const luckyNumber = parseFloat(window.prompt('What is your lucky number?'))
+  console.log(
+    `Hello ${userName}, you drink ${cupsOfCoffee} cups of coffee a day`
+  )
   // Putting about me in object
-  // const aboutMe = {}
-  // aboutMe.name = userName
-  // aboutMe.luckyNumber = luckyNumber
-  // aboutMe.favoriteMovies = favoriteMovies
+  const aboutMe = {}
+  aboutMe.name = userName
+  aboutMe.luckyNumber = luckyNumber
+  aboutMe.favoriteMovies = favoriteMovies
 
-  // console.log(aboutMe)
+  console.log(aboutMe)
 
   // Asking for two numbers
-  // const firstOperand = parseFloat(window.prompt('Give me a first number: '))
-  // const secondOperand = parseFloat(window.prompt('Give me a second number: '))
-
+  const firstOperand = parseFloat(window.prompt('Give me a first number: '))
+  const secondOperand = parseFloat(window.prompt('Give me a second number: '))
   // Sum
-  // const sum = firstOperand + secondOperand
-
+  const sum = firstOperand + secondOperand
   // Difference
-  // const difference = secondOperand - firstOperand
-
+  const difference = secondOperand - firstOperand
   // Product
-  // const product = firstOperand * secondOperand
-
+  const product = firstOperand * secondOperand
   // Quotient
-  // const quotient = firstOperand / secondOperand
-
+  const quotient = firstOperand / secondOperand
   // Remainder
-  // const remainder = firstOperand % secondOperand
-
+  const remainder = firstOperand % secondOperand
   // console.log Results
-  // console.log(
-  //   `These are the results for ${firstOperand} and ${secondOperand}:\n The sum is ${sum}\n The difference is ${difference}\n The product is ${product}\n The quotient is ${quotient}\n The remainder is ${remainder}`
-  // )
+  console.log(
+    `These are the results for ${firstOperand} and ${secondOperand}:\n The sum is ${sum}\n The difference is ${difference}\n The product is ${product}\n The quotient is ${quotient}\n The remainder is ${remainder}`
+  )
 
   // Array of random numbers
   let numbers = [
@@ -157,12 +148,35 @@ function main() {
     62,
     24,
   ]
-  const statistics = {}
-
-  for (let index = numbers.length; index < numbers; index++) {
-    let smallestNumber = numbers[index]
-    console.log(smallestNumber)
+  // Smallest number
+  let smallest = numbers[0]
+  for (let index = 0; index < numbers.length; index++) {
+    if (numbers[index] < smallest) {
+      smallest = numbers[index]
+    }
   }
+  // Largest number
+  let largest = numbers[0]
+  for (let index = 0; index < numbers.length; index++) {
+    if (numbers[index] > largest) {
+      largest = numbers[index]
+    }
+  }
+  // Sum of Numbers
+  let sumOfNumbers = 0
+  for (let index = 0; index < numbers.length; index++) {
+    sumOfNumbers += numbers[index]
+  }
+  // Average of Numbers
+  let averageOfNumbers = sumOfNumbers / numbers.length
+
+  const statistics = {}
+  statistics.sum = sumOfNumbers
+  statistics.average = averageOfNumbers
+  statistics.smallest = smallest
+  statistics.largest = largest
+
+  console.log(statistics)
 }
 
 document.addEventListener('DOMContentLoaded', main)
