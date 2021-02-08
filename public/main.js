@@ -193,6 +193,28 @@ function main() {
     }
   }
   console.log(sumOfEven)
+
+  // Playing around with JavaScript
+  let orderedNumbers = []
+  for (let index = 0; index < 11; index++) {
+    orderedNumbers.push(index)
+  }
+  console.log(orderedNumbers)
+  // Remove Last Item
+  orderedNumbers.pop()
+  console.log(orderedNumbers)
+
+  // functions
+  function sumNum(array) {
+    let number = 0
+    for (let index = 0; index < array.length; index++) {
+      number += array[index]
+    }
+    return number
+  }
+
+  console.log(`Sum of the numbers is ${sumNum(orderedNumbers)}`)
+  console.log(`The sum of your random numbers is ${sumNum(numbers)}`)
 }
 
 document.addEventListener('DOMContentLoaded', main)
