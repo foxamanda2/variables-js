@@ -204,7 +204,7 @@ function main() {
   orderedNumbers.pop()
   console.log(orderedNumbers)
 
-  // functions
+  // finding sum of array
   function sumNum(array) {
     let number = 0
     for (let index = 0; index < array.length; index++) {
@@ -212,9 +212,21 @@ function main() {
     }
     return number
   }
-
   console.log(`Sum of the numbers is ${sumNum(orderedNumbers)}`)
   console.log(`The sum of your random numbers is ${sumNum(numbers)}`)
+
+  // Finding Numbers with functions
+  function numberSearch(array) {
+    let bool = false
+    for (let index = 0; index < array.length; index++) {
+      if (array[index] == 3) {
+        bool = true
+      }
+    }
+    return `Does a 3 exist in this array: ${bool}`
+  }
+  console.log(numberSearch(orderedNumbers))
+  console.log(numberSearch(numbers))
 }
 
 document.addEventListener('DOMContentLoaded', main)
