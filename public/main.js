@@ -180,7 +180,7 @@ function main() {
   // Sum of Odd
   let sumOfOdd = 0
   for (let index = 0; index < numbers.length; index++) {
-    if (numbers[index] % 2 == 1) {
+    if (numbers[index] % 2 === 1) {
       sumOfOdd += numbers[index]
     }
   }
@@ -188,7 +188,7 @@ function main() {
   // Sum Of even
   let sumOfEven = 0
   for (let index = 0; index < numbers.length; index++) {
-    if (numbers[index] % 2 == 0) {
+    if (numbers[index] % 2 === 0) {
       sumOfEven += numbers[index]
     }
   }
@@ -219,7 +219,7 @@ function main() {
   function numberSearch(array) {
     let bool = false
     for (let index = 0; index < array.length; index++) {
-      if (array[index] == 3) {
+      if (array[index] === 3) {
         bool = true
       }
     }
